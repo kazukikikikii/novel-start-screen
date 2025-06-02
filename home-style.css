@@ -1,202 +1,43 @@
-@charset "UTF-8";
-
-/*共通部分-----------------------------*/
-html{
-    font-size: 100%;
-}
 body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    /*background: linear-gradient(-225deg, #2CD8D5 0%, #a19bff 56%, #ff7c8d 100%);*/
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background-color: #fefae0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
 }
 
-/*メニューバー-----------------------------*/
-.menu-bar{
-    display: flex;
-    flex-direction: row-reverse;
-}
-.menu-img{
-    height: 5.5vh;
-    margin-top: 10px;
-}
-.menubar-batu-img{
-    height: 5.5vh;
-    margin-top: 10px;
-}
-.main-nav{
-    margin-top: 4px;
-    background-color: rgba(255, 255, 255, 0.788);
-    width: 0;
-    position: absolute;
-    z-index: 2;
-    top: 50px;
-    right: 0;
-    overflow: hidden;
-    transition: .5s;
-}
-.main-nav li{
-    text-align: center;
-    margin: 2rem 0;
-}
-.main-nav a{
-    display: block;
-}
-.main-nav.open-menu{
-    width: 30%;
-}
-/*アバター-----------------------------*/
-.avatar{
-    text-align: center;
-    margin-top: 50px;
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-/*チャット欄-----------------------------*/
-.chat-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45vh;
-    margin: 0;
-}
-.chat-container {
-    width: 100%;
-    height: 46vh;
-    margin: 5px 10px;
-    background-color: rgba(255, 255, 255, 0.336);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-.messages {
-    flex: 1;
-    overflow-y: auto;
-    padding: 15px;
-}
-.message {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.message.ai {
-    align-items: flex-start;
-}
-.message.user {
-    align-items: flex-end;
-}
-.message p {
-    margin: 0;
-    padding: 3px 10px;
-    max-width: 60%;
-}
-.message.ai p {
-    background-color: rgba(26, 26, 26, 0.5);
-    color: #f4f4f4;
-    border-radius: 0px 15px 15px 15px;
-    text-align: left;
-}
-.message.user p {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 15px 0px 15px 15px;
-    text-align: right;
-}
-.input-container {
-    height: 5vh;
-    margin: 10px;
-    padding: 1px;
-    display: flex;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-.input-container input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-.input-container button {
-    width: 15%;
-    margin-right: 5px;
-    border: none;
-    cursor: pointer;
-}
-.hikouki{
-    width: 70%;
-    height: 70%;
-    text-align: center;
-    margin-top: 5px;
-
+p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-/* 画像サイズ自動変更 */
-
-img {
-    max-width: 80%;  /* 最大幅を画面幅の100%に設定 */
-    height: auto;     /* 高さを自動調整 */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/*デスクトップ版--------------------------------------------------------*/
-@media(min-width: 800px){
-    /*アバター*/
-    .avatar{
-        text-align: center;
-        margin-top: 20px;
-    }
-    .avatar_images{
-        width: 15%;
-        height: 15%;
-    }
+.btn {
+  background-color: #90caf9;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    /*メニュー*/
-    .menu-img{
-        height: 8vh;
-        margin-top: 10px;
-    }
-    .menubar-batu-img{
-        height: 8vh;
-        margin-top:10px;
-    }
-    .main-nav{
-        margin-top: 30px;
-        background-color: rgba(255, 255, 255, 0.623);
-        transition: .6s;
-    }
-    .main-nav li{
-        text-align: center;
-        list-style:none;
-        margin: 3em 2.5rem;
-    }
-    .main-nav a{
-        display: block;
-    }
-    .main-nav.open-menu{
-        width: 15%;
-    }
-
-    /*チャット欄-----------------------------*/
-    .chat-box{
-        height: 50vh;
-        width: 40%;
-        margin: 12px auto;
-
-    }
-    .chat-container {
-        height: 53vh;
-        margin: 0px;
-    }
-    .input-container button {
-        width: 15%;
-        margin-right: 5px;
-        border: none;
-        cursor: pointer;
-    }
-    .hikouki{
-        width: 45%;
-        height: 45%;
-        text-align: center;
-        margin-left: 30px;
-        margin-bottom: 15px;
-        
-    }
+.btn:hover {
+  background-color: #64b5f6;
 }
