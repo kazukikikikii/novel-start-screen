@@ -1,75 +1,57 @@
 body {
   margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  background: linear-gradient(to top, #fefae0 50%, #cce6ff 100%);
-  overflow: hidden;
-  height: 100vh;
+  padding: 0;
+  background-color: #fcb900;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   position: relative;
-  color: #333;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  z-index: 1;
-}
-
-p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  z-index: 1;
-}
-
-.button-group {
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-}
-
-.btn {
-  background-color: #90caf9;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #64b5f6;
-}
-
-/* 雲アニメーション */
-.clouds::before,
-.clouds::after {
-  content: "";
+.menu-icon {
   position: absolute;
-  background: url('https://www.transparenttextures.com/patterns/clouds.png');
-  width: 200%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  animation: moveClouds 60s linear infinite;
-  opacity: 0.3;
-  z-index: 0;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: white;
+  border: 2px solid black;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
 }
 
-.clouds::after {
-  animation-direction: reverse;
-  opacity: 0.2;
+.cloud {
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 2rem 3rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  box-shadow: 0 0 0 10px white, 
+              -30px 20px 0 0 white,
+              30px 20px 0 0 white,
+              -60px 10px 0 0 white,
+              60px 10px 0 0 white;
 }
 
-@keyframes moveClouds {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.cloud h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: black;
+}
+
+.start-button {
+  background-color: #a7d676;
+  border: 2px solid black;
+  font-size: 2rem;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px 0 #fff;
 }
