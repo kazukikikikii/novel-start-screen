@@ -31,7 +31,6 @@ body {
 
 .cloud {
   background: white;
-  border: 2px solid black;
   border-radius: 50%;
   padding: 2rem 3rem;
   position: relative;
@@ -39,11 +38,15 @@ body {
   margin-bottom: 2rem;
   font-size: 2.5rem;
   font-weight: bold;
-  box-shadow: 0 0 0 10px white, 
-              -30px 20px 0 0 white,
-              30px 20px 0 0 white,
-              -60px 10px 0 0 white,
-              60px 10px 0 0 white;
+  box-shadow:
+    0 0 0 20px white,
+    -40px 30px 0 0 white,
+    40px 30px 0 0 white,
+    -80px 20px 0 0 white,
+    80px 20px 0 0 white,
+    -60px -10px 0 0 white,
+    60px -10px 0 0 white,
+    0 -30px 0 0 white;
 }
 
 .cloud h1 {
