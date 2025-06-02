@@ -45,4 +45,31 @@ p {
   background-color: #64b5f6;
 }
 
-/
+/* 雲アニメーション */
+.clouds::before,
+.clouds::after {
+  content: "";
+  position: absolute;
+  background: url('https://www.transparenttextures.com/patterns/clouds.png');
+  width: 200%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: moveClouds 60s linear infinite;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.clouds::after {
+  animation-direction: reverse;
+  opacity: 0.2;
+}
+
+@keyframes moveClouds {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
