@@ -20,6 +20,13 @@ body {
   border: 2px solid black;
   padding: 0.2em 0.5em;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ホバー時の色変化 */
+.menu-icon:hover {
+  background: black;
+  color: white;
 }
 
 .cloud {
@@ -54,4 +61,10 @@ body {
   font-weight: bold;
   color: black;
   text-shadow: 1px 1px 0 #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* ホバー時のボタン色 */
+.start-button:hover {
+  background-color: #8bbf5c;
 }
