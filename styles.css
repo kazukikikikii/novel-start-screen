@@ -1,24 +1,33 @@
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  background-color: #fefae0;
+  background: linear-gradient(to top, #fefae0 50%, #cce6ff 100%);
+  overflow: hidden;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  position: relative;
   color: #333;
 }
 
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  z-index: 1;
 }
 
+p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
 
 .button-group {
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 .btn {
@@ -35,3 +44,5 @@ h1 {
 .btn:hover {
   background-color: #64b5f6;
 }
+
+/
