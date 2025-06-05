@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background-color: #8bd36c;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: white;
+  border: 2px solid black;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+}
+
+.title {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  background: white;
+  display: inline-block;
+  padding: 0.2em 1em;
+  border: 2px solid black;
+}
+
+.modes {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 10%;
+}
+
+.mode img {
+  width: 120px;
+  height: auto;
+}
+
+.label {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.center-block {
+  position: relative;
+  margin: 40px auto;
+  width: 300px;
+}
+
+.blocks {
+  width: 100%;
+}
+
+.center-label {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 0 white;
+}
+
+.write-button {
+  display: inline-flex;
+  align-items: center;
+  background: #fcb900;
+  border: 2px solid black;
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.write-button img {
+  width: 40px;
+  margin-left: 10px;
+}
