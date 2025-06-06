@@ -29,7 +29,7 @@ body {
 .modes {
   display: flex;
   justify-content: space-around;
-  margin: 40px 100%;
+  margin: 40px 10%;
 }
 
 .mode img {
@@ -77,6 +77,6 @@ body {
 }
 
 .write-button img {
-  width: 40px;
+  width: 400px;
   margin-left: 10px;
 }
