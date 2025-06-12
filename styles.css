@@ -12,36 +12,54 @@ body {
 }
 
 /*メニューバー-----------------------------*/
-.menuicon{
-    display: flex;
-    flex-direction: row-reverse;
+.menuicon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
 }
-.menu-img{
-    height: 5.5vh;
-    margin-top: 10px;
+
+.btn-menu {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
-.menubar-batu-img{
-    height: 5.5vh;
-    margin-top: 10px;
+
+.menu-img {
+  width: 40px;
+  height: auto;
 }
-.main-nav{
-    margin-top: 4px;
-    background-color: rgba(255, 255, 255, 0.788);
-    width: 0;
-    position: absolute;
-    z-index: 2;
-    top: 50px;
-    right: 0;
-    overflow: hidden;
-    transition: .5s;
+
+.main-nav {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid black;
+  list-style: none;
+  padding: 1rem;
+  width: 180px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-.main-nav li{
-    text-align: center;
-    margin: 2rem 0;
+
+.main-nav.open {
+  display: flex;
 }
-.main-nav a{
-    display: block;
+
+.main-nav li {
+  margin: 10px 0;
+  text-align: center;
 }
+
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
 .main-nav.open-menu{
     width: 30%;
 }
