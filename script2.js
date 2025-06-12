@@ -74,9 +74,10 @@ function sendMessage() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menuButton');
-  const nav = document.getElementById('menuNav');
+  const menuNav = document.getElementById('menuNav');
 
   menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    menuNav.classList.toggle('open');
   });
 });
+
