@@ -50,16 +50,22 @@ body {
   margin-bottom: 2rem;
 }
 
+.genres {
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  align-items: flex-start;
+  gap: 30px; /* 画像同士の間隔 */
+  flex-wrap: wrap; /* 小画面で折り返し可能 */
+  margin-top: 2rem;
+}
+
 .genre {
-  width: 150px;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-  margin: 10px;
   cursor: pointer;
 }
 
@@ -71,6 +77,9 @@ body {
 
 .genre span {
   color: black;
+  text-shadow: 1px 1px 0 white;
+}
+
   text-shadow: 1px 1px 0 white;
 }
 
