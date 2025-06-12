@@ -69,3 +69,14 @@ function sendMessage() {
     messages.scrollTop = messages.scrollHeight;
   }, 1000);
 }
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menuButton');
+  const nav = document.getElementById('menuNav');
+
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+});
