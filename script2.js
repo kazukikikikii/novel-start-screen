@@ -25,3 +25,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+function sendMessage() {
+  const input = document.getElementById('userInput');
+  const text = input.value.trim();
+  if (text === '') return;
+
+  const messages = document.getElementById('messages');
+
+  // ユーザーメッセージ
+  const userMessage = document.createElement('div');
+  userMessage.classList.add('message', 'user');
+  userMessage.innerHTML = `
+    <div class="bubble">${text}</div>
+    <img src="images/user.png" alt="user">
+  `;
+  messages.appendChild(userMessage);
+
+  input.value = '';
+
+  // AIメッセージ（例）
+  setTimeout(() => {
+    const aiMessage = document.createElement('div');
+    aiMessage.classList.add('message', 'ai');
+    aiMessage.innerHTML = `
+      <img src="images/ai.png" alt="ai">
+      <div class="bubble">「駆ける」とか「疾走する」って言葉が合うかも！</div>
+    `;
+    messages.appendChild(aiMessage);
+    messages.scrollTop = messages.scrollHeight;
+  }, 1000);
+}
