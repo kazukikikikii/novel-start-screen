@@ -50,44 +50,27 @@ body {
   margin-bottom: 2rem;
 }
 
-.genres {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .genre {
   width: 150px;
-  height: 150px;
-  position: relative;
+  height: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  border: 2px solid black;
   text-align: center;
   margin: 10px;
+  cursor: pointer;
 }
 
-.heart {
-  background-color: #d8f0d8;
-  clip-path: polygon(50% 15%, 80% 0, 100% 25%, 50% 100%, 0 25%, 20% 0);
-}
-
-.flask {
-  background-color: #cce5f6;
-  clip-path: polygon(40% 0%, 60% 0%, 60% 30%, 80% 100%, 20% 100%, 40% 30%);
-}
-
-.sword {
-  background-color: #f0706d;
-  clip-path: polygon(30% 0, 100% 20%, 70% 50%, 100% 80%, 30% 100%, 0 50%);
+.genre-icon {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .genre span {
-  z-index: 1;
   color: black;
   text-shadow: 1px 1px 0 white;
 }
+
