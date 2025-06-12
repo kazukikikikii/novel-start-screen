@@ -45,11 +45,7 @@ function sendMessage() {
   const input = document.getElementById('userInput');
   const text = input.value.trim();
   if (text === '') return;
-
   const messages = document.getElementById('messages');
-
-
-  
   // ユーザーメッセージ
   const userMessage = document.createElement('div');
   userMessage.classList.add('message', 'user');
