@@ -2,40 +2,26 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プロット作成</title>
-  <link rel="stylesheet" href="styles3.css">
+  <title>てなおしモード</title>
+  <link rel="stylesheet" href="styles4.css">
 </head>
 <body>
   <div class="top-bar">
-    <img src="back.png" alt="戻る" class="back-icon" onclick="history.back()">
-
-   
-    <div class="title-box">プロット作成</div>
+    <img src="back.png" class="back-icon" onclick="history.back()" />
+    <div class="title">てなおしモード</div>
     <div class="menu-icon">☰</div>
   </div>
 
-  <div class="main">
-    <div class="subtitle">小説のジャンルをえらんでね</div>
-<nobr>
-    <div class="genres">
-  <div class="genre" onclick="location.href='chat.html'">
-    <img src="heart.png" alt="恋愛" class="genre-icon">
-    
-  </div>
-  <div class="genre" onclick="location.href='chat.html'">
-    <img src="flask.png" alt="SF" class="genre-icon">
-    
-  </div>
-  <div class="genre" onclick="location.href='chat.html'">
-    <img src="sword.png" alt="冒険" class="genre-icon">
-    
-  </div>
-</div>
-
-</nobr>
+  <div class="chat-box">
+    <div class="messages" id="messages"></div>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="ここに書いてね">
+      <button onclick="sendMessage()">
+        <img src="hikouki.png" class="send-icon" />
+      </button>
+    </div>
   </div>
 
-
+  <script src="script2.js"></script>
 </body>
 </html>
