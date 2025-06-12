@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background-color: #a8d672;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a8d672;
+  padding: 10px 20px;
+  border-bottom: 3px solid #000;
+}
+
+.back-icon {
+  width: 40px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  background: white;
+  border: 2px solid black;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}
+
+.title-box {
+  background: white;
+  border: 2px solid black;
+  padding: 0.3em 1em;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.main {
+  background-color: #fff200;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.subtitle {
+  background: white;
+  display: inline-block;
+  padding: 0.4em 1em;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.genres {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.genre {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: 2px solid black;
+  text-align: center;
+  margin: 10px;
+}
+
+.heart {
+  background-color: #d8f0d8;
+  clip-path: polygon(50% 15%, 80% 0, 100% 25%, 50% 100%, 0 25%, 20% 0);
+}
+
+.flask {
+  background-color: #cce5f6;
+  clip-path: polygon(40% 0%, 60% 0%, 60% 30%, 80% 100%, 20% 100%, 40% 30%);
+}
+
+.sword {
+  background-color: #f0706d;
+  clip-path: polygon(30% 0, 100% 20%, 70% 50%, 100% 80%, 30% 100%, 0 50%);
+}
+
+.genre span {
+  z-index: 1;
+  color: black;
+  text-shadow: 1px 1px 0 white;
+}
