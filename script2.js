@@ -37,7 +37,7 @@ function sendMessage() {
   userMessage.classList.add('message', 'user');
   userMessage.innerHTML = `
     <div class="bubble">${text}</div>
-    <img src="images/user.png" alt="user">
+    <img src="user.png" alt="user">
   `;
   messages.appendChild(userMessage);
 
@@ -48,7 +48,7 @@ function sendMessage() {
     const aiMessage = document.createElement('div');
     aiMessage.classList.add('message', 'ai');
     aiMessage.innerHTML = `
-      <img src="images/ai.png" alt="ai">
+      <img src="ai.png" alt="ai">
       <div class="bubble">「駆ける」とか「疾走する」って言葉が合うかも！</div>
     `;
     messages.appendChild(aiMessage);
