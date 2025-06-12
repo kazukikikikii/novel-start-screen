@@ -17,3 +17,11 @@ character.addEventListener('click', () => {
     speech.style.display = "none";
   }, 2000);
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const back = document.querySelector(".back-icon");
+  if (back) {
+    back.addEventListener("click", () => {
+      history.back();
+    });
+  }
+});
