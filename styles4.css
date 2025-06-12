@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  background-color: #a8d672;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #a8d672;
+}
+
+.back-icon {
+  width: 40px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  background: white;
+  border: 2px solid black;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}
+
+.title {
+  background: white;
+  border: 2px solid black;
+  padding: 0.3em 1em;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.chat-box {
+  background-color: #f95f5f;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.ai {
+  justify-content: flex-start;
+}
+
+.message.user img,
+.message.ai img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+.bubble {
+  max-width: 60%;
+  padding: 10px 15px;
+  border: 2px solid black;
+  background-color: white;
+  position: relative;
+  font-weight: bold;
+}
+
+.message.user .bubble {
+  border-radius: 15px 15px 0 15px;
+  margin-left: 10px;
+}
+
+.message.ai .bubble {
+  border-radius: 15px 15px 15px 0;
+  margin-right: 10px;
+}
+
+.message.ai .bubble::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-right: 15px solid white;
+}
+
+.message.user .bubble::before {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left: 15px solid white;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #a8d672;
+  padding: 10px;
+  border-top: 3px solid black;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.send-icon {
+  width: 40px;
+  height: auto;
+  margin-left: 10px;
+  cursor: pointer;
+}
