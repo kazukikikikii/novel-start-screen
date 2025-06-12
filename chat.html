@@ -1,37 +1,27 @@
-<div class="chat-box">
-<div class="chat-container">
-                <div class="messages" id="messages"></div>
-                <div class="input-container">
-                    <input type="text" id="userInput" placeholder="Aa">
-                    <button onclick="sendMessage()">
-                        <div class="hikouki"><img src="images/hikouki.png"></div>
-                    </button>
-                        
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アイデアモード（冒険）</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-bar">
+    <img src="images/back.png" class="back-icon" onclick="history.back()" />
+    <div class="title">アイデアモード（冒険）</div>
+    <div class="menu-icon">☰</div>
+  </div>
 
-            <script>
-                function sendMessage() {
-                    var userInput = document.getElementById('userInput').value;
-                    if (userInput.trim() === '') return;
-    
-                    var messages = document.getElementById('messages');
-    
-                    var userMessage = document.createElement('div');
-                    userMessage.classList.add('message', 'user');
-                    userMessage.innerHTML = `<p>${userInput}</p>`;
-                    messages.appendChild(userMessage);
-    
-                    document.getElementById('userInput').value = '';
-    
-                    // AIからの応答をシミュレート（ここでAPIを呼び出す）
-                    setTimeout(function() {
-                        var aiResponse = document.createElement('div');
-                        aiResponse.classList.add('message', 'ai');
-                        aiResponse.innerHTML = `<p>何かご用件はありますか？</p>`;
-                        messages.appendChild(aiResponse);
-                        messages.scrollTop = messages.scrollHeight;
-                    }, 1000);
-                }
-            </script>
-        </div>
+  <div class="chat-box">
+    <div class="messages" id="messages"></div>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="ここに書いてね">
+      <button onclick="sendMessage()">
+        <img src="images/hikouki.png" class="send-icon" />
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
