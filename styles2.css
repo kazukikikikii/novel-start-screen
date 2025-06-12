@@ -33,7 +33,7 @@ body {
 }
 
 .mode img {
-  width: 1200px;
+  width: 250px;
   height: auto;
 }
 
@@ -46,11 +46,11 @@ body {
 .center-block {
   position: relative;
   margin: 40px auto;
-  width: 3000px;
+  width: 600px;
 }
 
 .blocks {
-  width: 500%;
+  width: 100%;
 }
 
 .center-label {
@@ -77,6 +77,6 @@ body {
 }
 
 .write-button img {
-  width: 400px;
+  width: 100px;
   margin-left: 10px;
 }
