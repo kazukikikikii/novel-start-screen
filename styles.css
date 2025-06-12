@@ -12,46 +12,27 @@ body {
 }
 
 /*メニューバー-----------------------------*/
-.menuicon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-}
-
-.btn-menu {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.menu-img {
-  width: 40px;
-  height: auto;
-}
-
 .main-nav {
   position: absolute;
   top: 60px;
   right: 10px;
+  display: none; /* ← 非表示からスタート */
   background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid black;
   list-style: none;
   padding: 1rem;
   width: 180px;
-  display: none;
-  flex-direction: column;
+  z-index: 99;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .main-nav.open {
-  display: flex;
+  display: block; /* ← 表示に切り替える */
 }
 
 .main-nav li {
   margin: 10px 0;
-  text-align: center;
+  text-align: left;
 }
 
 .main-nav a {
@@ -60,8 +41,8 @@ body {
   font-weight: bold;
 }
 
-.main-nav.open-menu{
-    width: 30%;
+
+
 }
 
 /* ホバー時の色変化 */
