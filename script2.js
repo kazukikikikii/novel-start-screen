@@ -4,8 +4,13 @@ document.getElementById('ideaBtn').onclick = function() {
 
 
 
-document.getElementById('backBtn').onclick = function() {
-  location.href = 'index2.html';
+document.getElementById('eraserBtn').onclick = function() {
+  location.href = 'eraser.html';
+};
+
+
+document.getElementById('blockBtn').onclick = function() {
+  location.href = 'plot.html';
 };
 
 
