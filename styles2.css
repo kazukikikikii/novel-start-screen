@@ -16,6 +16,42 @@ body {
   padding: 0.3em 0.6em;
   cursor: pointer;
 }
+.menu-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.main-nav {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 160px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid black;
+  border-radius: 6px;
+  list-style: none;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.main-nav.open {
+  display: block;
+}
+
+.main-nav li {
+  margin: 8px 0;
+  text-align: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
 
 .title {
   margin-top: 30px;
