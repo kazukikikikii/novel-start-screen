@@ -13,6 +13,16 @@ document.getElementById('blockBtn').onclick = function() {
   location.href = 'plot.html';
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menuButton');
+  const menuNav = document.getElementById('menuNav');
+
+  if (menuBtn && menuNav) {
+    menuBtn.addEventListener('click', () => {
+      menuNav.classList.toggle('open');
+    });
+  }
+});
 
 
 const character = document.getElementById('character');
