@@ -16,36 +16,34 @@ body {
   position: absolute;
   top: 60px;
   right: 10px;
-  display: none; /* ← 非表示からスタート */
+  display: none;
   background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid black;
   list-style: none;
-  padding: 1rem;
-  width: 60px;
+  padding: 0.5rem;
+  width: 130px;
   z-index: 99;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-.menuicon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 6px;
 }
 
 .main-nav.open {
-  display: block; /* ← 表示に切り替える */
+  display: block;
 }
 
 .main-nav li {
-  margin: 10px 0;
-  text-align: left;
+  margin: 6px 0;
+  text-align: center;
 }
 
 .main-nav a {
   text-decoration: none;
   color: black;
+  font-size: 0.9rem;
   font-weight: bold;
 }
+
+
 
 /* ホバー時の色変化 */
 .menu-icon:hover {
