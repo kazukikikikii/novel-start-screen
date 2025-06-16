@@ -58,21 +58,7 @@ body {
 }
 
 
-.main-nav.open {
-  display: block;
-}
 
-.main-nav li {
-  margin: 6px 0;
-  text-align: center;
-}
-
-.main-nav a {
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: black;
-}
 
 
 
