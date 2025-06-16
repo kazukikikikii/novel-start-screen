@@ -11,32 +11,43 @@ body {
   position: relative;
 }
 
-/*メニューバー-----------------------------*/
-.menuicon {
+.menu-wrapper {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   z-index: 10;
 }
 
-.menu-img {
-  width: 60px; 
-  height: auto;
-}
-
 .main-nav {
+  display: none;
   position: absolute;
   top: 50px;
   right: 0;
-  width: 140px; /* ← 小さいサイズ */
-  padding: 0.5rem;
-  background-color: rgba(255,255,255,0.95);
+  width: 160px;
+  background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 6px;
   list-style: none;
-  display: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
+
+.main-nav.open {
+  display: block;
+}
+
+.main-nav li {
+  margin: 8px 0;
+  text-align: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
 
 .main-nav.open {
   display: block;
