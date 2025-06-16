@@ -21,7 +21,7 @@ body {
   border: 2px solid black;
   list-style: none;
   padding: 1rem;
-  width: 180px;
+  width: 90px;
   z-index: 99;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
