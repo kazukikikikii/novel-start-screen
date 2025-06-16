@@ -76,9 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menuButton');
   const menuNav = document.getElementById('menuNav');
 
-  menuBtn.addEventListener('click', () => {
-    menuNav.classList.toggle('open');
-  });
+ if (menuBtn && menuNav) {
+    menuBtn.addEventListener('click', () => {
+      menuNav.classList.toggle('open');
+    });
+  } else {
+    console.error('menuButton または menuNav が見つかりません。');
+  }
 });
 
 
