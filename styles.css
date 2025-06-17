@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #fcb900;
-  font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  background-color: #fcb900; /* 各ページの背景色はそれぞれのCSSで上書き */
+  font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; /* 全体で共通のフォント */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,21 +10,22 @@ body {
   height: 100vh;
   position: relative;
 }
-.menu-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
-  background: white;
-  border: 2px solid black;
-  padding: 0.3em 0.6em;
-  cursor: pointer;
-}
+
+/* 共通メニューのスタイル */
 .menu-wrapper {
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 10;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  background: white;
+  border: 2px solid black;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  border-radius: 5px; /* 角丸を追加 */
 }
 
 .main-nav {
@@ -55,22 +56,68 @@ body {
   color: black;
   font-weight: bold;
   font-size: 0.95rem;
+  display: block; /* クリック領域を広げる */
+  padding: 5px 0;
 }
-
-
-
-
-
-
-
-
 
 /* ホバー時の色変化 */
 .menu-icon:hover {
   background: black;
   color: white;
 }
+.main-nav a:hover {
+  background-color: #f0f0f0;
+}
 
+
+/* 共通キャラクターと吹き出しのスタイル */
+.character-area {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  width: 200px;
+  z-index: 100; /* 他の要素より手前に表示 */
+}
+
+.character-img {
+  width: 150%;
+  max-width: 150px; /* キャラクター画像の最大幅を調整 */
+  height: auto;
+}
+
+.speech {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 1em;
+  padding: 0.7em 1.2em;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  display: flex; /* Flexboxで内容を中央揃え */
+  align-items: center;
+  position: relative;
+  border: 2px solid black; /* 吹き出しの枠線を追加 */
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+
+/* 以下はindex.html固有のスタイル */
 .cloud {
   background: white;
   border-radius: 50%;
@@ -107,36 +154,11 @@ body {
   color: black;
   text-shadow: 1px 1px 0 #fff;
   transition: background-color 0.3s ease;
+  border-radius: 10px; /* 角丸を追加 */
 }
 
 /* ホバー時のボタン色 */
 .start-button:hover {
   background-color: #8bbf5c;
 }
-.character-area {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  cursor: pointer;
-  width: 200px;
-  z-index: 5;
-}
 
-.character-img {
-  width: 150%;
-}
-
-.speech {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border-radius: 1em;
-  padding: 0.5em 1em;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  white-space: nowrap;
-  display: none;
-}
