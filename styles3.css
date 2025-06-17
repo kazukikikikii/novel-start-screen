@@ -3,6 +3,47 @@ body {
   background-color: #a8d672;
   font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
 }
+.character-area {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  width: 200px;
+  z-index: 100;
+}
+
+.character-img {
+  width: 150%;
+}
+
+.speech {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 1em;
+  padding: 0.7em 1.2em;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
 
 .top-bar {
   display: flex;
