@@ -34,6 +34,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const characterContainer = document.getElementById('characterContainer');
+  const speechText = document.getElementById('speechText');
+  const closeSpeech = document.getElementById('closeSpeech');
+
+  if (characterContainer && speechText && closeSpeech) {
+    // ページ名またはURLパスから判定
+    const path = window.location.pathname;
+    let message = "この画面の説明です。";
+
+    if (path.includes("index.html")) {
+      message = "ここはスタート画面だよ！";
+    } else if (path.includes("index2.html")) {
+      message = "モードをえらんで小説を始めよう！";
+    } else if (path.includes("index3.html")) {
+      message = "アイデアをふくらませる画面だよ！";
+    } else if (path.includes("eraser.html")) {
+      message = "てなおしモードで文章をきれいにしよう！";
+    } else if (path.includes("plot.html")) {
+      message = "プロットを作成する画面だよ！";
+    } else if (path.includes("chat.html")) {
+      message = "チャットで小説の相談ができるよ！";
+    }
+
+    speechText.textContent = message;
+    characterContainer.style.display = 'block';
+
+    closeSpeech.addEventListener('click', () => {
+      characterContainer.style.display = 'none';
+    });
+  }
+});
+
+
+  
   // ✅ モード選択の画面遷移処理（要素がある場合のみ）
   const ideaBtn = document.getElementById('ideaBtn');
   const eraserBtn = document.getElementById('eraserBtn');
