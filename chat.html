@@ -2,14 +2,21 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>アイデアモード</title>
+  <title>チャットモード</title>
   <link rel="stylesheet" href="styles4.css">
 </head>
 <body>
   <div class="top-bar">
     <img src="back.png" class="back-icon" onclick="history.back()" />
-    <div class="title">アイデアモード</div>
-    <div class="menu-icon">☰</div>
+    <div class="title" id="chatTitle"></div> <div class="menu-icon" id="menuButton">☰</div>
+    <ul class="main-nav" id="menuNav">
+      <li><a href="homegamen.html">ホーム</a></li>
+      <li><a href="keiziban.html">掲示板</a></li>
+      <li><a href="avatarset.html">アバター</a></li>
+      <li><a href="osirase.html">お知らせ</a></li>
+      <li><a href="settei.html">設定</a></li>
+      <li><a href="index.html">ログアウト</a></li>
+    </ul>
   </div>
 
   <div class="chat-box">
@@ -22,6 +29,35 @@
     </div>
   </div>
 
+  <div class="character-area" id="characterContainer">
+    <img src="character.png" alt="キャラ" class="character-img" />
+    <div class="speech" id="speech">
+      <span id="speechText"></span>
+      <button id="closeSpeech" class="close-btn">✕</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // URLパラメータからモードとジャンルを取得し、タイトルを設定
+      const urlParams = new URLSearchParams(window.location.search);
+      const mode = urlParams.get('mode');
+      const genre = urlParams.get('genre');
+      const chatTitle = document.getElementById('chatTitle');
+
+      if (mode === 'idea') {
+        chatTitle.textContent = 'アイデアモード';
+      } else if (mode === 'eraser') {
+        chatTitle.textContent = 'てなおしモード';
+      } else {
+        chatTitle.textContent = 'チャット';
+      }
+      // ジャンルも表示する場合はここに追記
+      // if (genre) {
+      //   chatTitle.textContent += ` (${genre})`;
+      // }
+    });
+  </script>
   <script src="script2.js"></script>
 </body>
 </html>
