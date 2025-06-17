@@ -83,3 +83,35 @@ function sendMessage() {
     messages.scrollTop = messages.scrollHeight;
   }, 1000);
 }
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('characterContainer');
+  const speech = document.getElementById('speech');
+  const speechText = document.getElementById('speechText');
+  const closeBtn = document.getElementById('closeSpeech');
+
+  if (container && speech && speechText && closeBtn) {
+    // ページごとにメッセージを出し分ける
+    const path = window.location.pathname;
+    let message = "このページの説明です。";
+
+    if (path.includes("index.html")) {
+      message = "ここはスタート画面です！";
+    } else if (path.includes("index2.html")) {
+      message = "モードを選んでね！";
+    } else if (path.includes("plot.html")) {
+      message = "プロットを作ってみよう！";
+    }
+
+    speechText.textContent = message;
+    speech.style.display = "flex";  // ✅ 吹き出しを表示
+
+    closeBtn.addEventListener("click", () => {
+      container.style.display = "none";
+    });
+  } else {
+    console.warn("キャラまたは吹き出しの要素が見つかりませんでした");
+  }
+});
